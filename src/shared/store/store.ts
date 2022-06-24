@@ -45,7 +45,8 @@ export const useStore = create<Props>((set, get) => ({
     const showError = (error: any) => {
       switch (error.code) {
         case error.PERMISSION_DENIED:
-          const message1 = 'User denied the request for Geolocation.'
+          const message1 =
+            'User denied the request for Geolocation. Please give me permission get your location in your browser'
           notifyError(message1)
           get().setMessage(message1)
           return
